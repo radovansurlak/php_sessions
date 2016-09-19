@@ -1,0 +1,90 @@
+$gallery-width: 96vw;
+$number-of-collumns: 3;
+$gap: 0.5vw;
+$button-size: 5vw;
+$button-small: 4vw;
+$button-mobile: 10vw;
+
+////////////////////////
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+a#logout-button {
+  all: unset;
+  image-rendering: auto;
+  background: no-repeat center/80% url("../media/logout.png");
+  position: fixed;
+  display: inline-block;
+
+  left: 50vw - ($button-size/2);
+  z-index: 10;
+  width: $button-size;
+  height: $button-size;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 300ms ease, left 1ms;
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 10px #fff;
+      background-color: rgba(255,255,255,0.9);
+    };
+    &:active {
+      transform: scale(0.9);
+      background-color: rgba(255,255,255,0.5);
+    }
+}
+
+#gallery {
+  padding: (100vw - $gallery-width) / 2;
+  width: $gallery-width;
+  column-width: ($gallery-width/$number-of-collumns) - 2* $gap;
+  column-gap: $gap;
+  &:hover #gallery-image:not(:hover){
+    opacity: (0.7);
+  }
+
+  #gallery-image {
+    -webkit-backface-visibility: hidden;
+    padding-bottom: 2*$gap;
+    box-sizing: border-box;
+    width: ($gallery-width/$number-of-collumns) - 2* $gap;
+    transition: opacity 300ms;
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  a#logout-button {
+    width: $button-mobile;
+    height: $button-mobile;
+    left: 50vw - ($button-mobile/2);
+  }
+
+  #gallery {
+    column-width: ($gallery-width/2) - 2* $gap;
+    #gallery-image {
+      width: ($gallery-width/2) - 2* $gap;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  a#logout-button {
+    width: $button-mobile;
+    height: $button-mobile;
+    left: 50vw - ($button-mobile/2);
+  }
+
+  #gallery {
+    column-width: ($gallery-width/1) - 2* $gap;
+    #gallery-image {
+      width: ($gallery-width/1) - 2* $gap;
+    }
+  }
+}

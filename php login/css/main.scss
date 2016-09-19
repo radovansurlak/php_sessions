@@ -1,0 +1,101 @@
+$font-stack: 100 100% Lato, sans-serif;
+
+$login-width: 38%;
+$login-height: auto;
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: no-repeat url("https://images.unsplash.com/photo-1416879595882-3373a0480b5b?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb");
+  background-size: cover;
+  font: $font-stack;
+  text-align: center;
+    h2 {
+      margin-top: -0.8vw;
+    }
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color: black;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: black;
+  opacity: 1;
+}
+
+
+#banner {
+  background-color: rgba(255,255,255,0.5);
+  display: inline-block;
+  position: absolute;
+  left: 50% - ($login-width/2);
+  top:  30vh;
+  width: $login-width;
+  height: $login-height;
+  min-height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  padding-bottom: 2vw;
+}
+
+#login {
+  width: 90%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  input {
+
+    width: 45%;
+    min-height: 25px;
+    height: 2vw;
+    padding: 0.5vw;
+    font: $font-stack;
+    background: rgba(250,250,250,0.6);
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 7px;
+    outline: none;
+    transition: background 200ms ease;
+      &:hover {
+        background: rgba(0,0,0,0.1);
+      }
+
+      &#button {
+        margin-top: 1vw;
+        width: 100%;
+        height: 3vw;
+      }
+      &#button:hover {
+        background: rgba(0,0,0,0.5);
+      }
+      &#button:active {
+        background: rgba(0,0,0,0.7);
+      }
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  #banner {
+    width: 60vw;
+  }
+  #login {
+    width: 50vw;
+    input {
+      width: 100%;
+      margin: 4px;
+    }
+  }
+
+
+}

@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a#logout-button {
+  all: unset;
+  image-rendering: auto;
+  background: no-repeat center/80% url("../media/logout.png");
+  position: fixed;
+  display: inline-block;
+  left: 47.5vw;
+  z-index: 10;
+  width: 5vw;
+  height: 5vw;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 300ms ease, left 1ms; }
+  a#logout-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #fff;
+    background-color: rgba(255, 255, 255, 0.9); }
+  a#logout-button:active {
+    transform: scale(0.9);
+    background-color: rgba(255, 255, 255, 0.5); }
+
+#gallery {
+  padding: 2vw;
+  width: 96vw;
+  column-width: 31vw;
+  column-gap: 0.5vw; }
+  #gallery:hover #gallery-image:not(:hover) {
+    opacity: 0.7; }
+  #gallery #gallery-image {
+    -webkit-backface-visibility: hidden;
+    padding-bottom: 1vw;
+    box-sizing: border-box;
+    width: 31vw;
+    transition: opacity 300ms; }
+
+@media screen and (max-width: 650px) {
+  a#logout-button {
+    width: 10vw;
+    height: 10vw;
+    left: 45vw; }
+
+  #gallery {
+    column-width: 47vw; }
+    #gallery #gallery-image {
+      width: 47vw; } }
+@media screen and (max-width: 400px) {
+  a#logout-button {
+    width: 10vw;
+    height: 10vw;
+    left: 45vw; }
+
+  #gallery {
+    column-width: 95vw; }
+    #gallery #gallery-image {
+      width: 95vw; } }
+
+/*# sourceMappingURL=main.css.map */
