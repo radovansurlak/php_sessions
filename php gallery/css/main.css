@@ -26,7 +26,7 @@ a#logout-button {
 #gallery {
   padding: 2vw;
   width: 96vw;
-  column-width: 31vw;
+  column-width: 47vw;
   column-gap: 0.5vw; }
   #gallery:hover #gallery-image:not(:hover) {
     opacity: 0.7; }
@@ -34,7 +34,7 @@ a#logout-button {
     -webkit-backface-visibility: hidden;
     padding-bottom: 1vw;
     box-sizing: border-box;
-    width: 31vw;
+    width: 47vw;
     transition: opacity 300ms; }
 
 @media screen and (max-width: 650px) {
